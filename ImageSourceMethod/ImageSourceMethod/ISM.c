@@ -96,6 +96,9 @@ void ISM_simulateRoom(float length, float height, float width,
             // find the loss due to reflections
             reflectionGains[k] = powf(-wallAbsorbtionCoefficient,(float)i);
             
+            // model the 1/d pressure loss
+            reflectionGains[k] /= distances[k];
+            
             // copy the position of the sound source to the output list
             imageSources[k] = imageSourcesByLevel[i][j].location;
             
