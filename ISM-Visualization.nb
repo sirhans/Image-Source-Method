@@ -1,0 +1,345 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12425,        336]
+NotebookOptionsPosition[     12094,        319]
+NotebookOutlinePosition[     12449,        335]
+CellTagsIndexPosition[     12406,        332]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Room", " ", "=", 
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Opacity", "[", "0.1", "]"}], ",", "Blue", ",", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "4", ",", "5"}], "}"}]}], "]"}]}], "}"}], "]"}]}],
+    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SoundSource", " ", "=", " ", 
+    RowBox[{"ListPointPlot3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1", ",", "1"}], "}"}], "}"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"Green", ",", 
+         RowBox[{"PointSize", "\[Rule]", "0.02"}]}], "}"}]}]}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ImageSources1", " ", "=", 
+    RowBox[{"ListPointPlot3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "1.000000", ",", 
+          RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.000000"}], ",", "1.000000", ",", "1.000000"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", 
+          RowBox[{"-", "1.000000"}], ",", "1.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "1.000000", ",", "9.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"5.000000", ",", "1.000000", ",", "1.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "7.000000", ",", "1.000000"}], "}"}]}], 
+       "}"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"Blue", ",", 
+         RowBox[{"PointSize", "\[Rule]", "0.02"}]}], "}"}]}]}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ImageSources2", " ", "=", 
+    RowBox[{"ListPointPlot3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.000000"}], ",", "1.000000", ",", 
+          RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", 
+          RowBox[{"-", "1.000000"}], ",", 
+          RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "1.000000", ",", "11.000000"}], "}"}], ",", 
+        
+        RowBox[{"{", 
+         RowBox[{"5.000000", ",", "1.000000", ",", 
+          RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "7.000000", ",", 
+          RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.000000"}], ",", 
+          RowBox[{"-", "1.000000"}], ",", "1.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.000000"}], ",", "1.000000", ",", "9.000000"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"7.000000", ",", "1.000000", ",", "1.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.000000"}], ",", "7.000000", ",", "1.000000"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", 
+          RowBox[{"-", "1.000000"}], ",", "9.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"5.000000", ",", 
+          RowBox[{"-", "1.000000"}], ",", "1.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "9.000000", ",", "1.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "1.000000", ",", 
+          RowBox[{"-", "9.000000"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"5.000000", ",", "1.000000", ",", "9.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", "7.000000", ",", "9.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "5.000000"}], ",", "1.000000", ",", "1.000000"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"5.000000", ",", "7.000000", ",", "1.000000"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.000000", ",", 
+          RowBox[{"-", "7.000000"}], ",", "1.000000"}], "}"}]}], "}"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"Yellow", ",", 
+         RowBox[{"PointSize", "\[Rule]", "0.02"}]}], "}"}]}]}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ImageSources3", " ", "=", 
+   RowBox[{"ListPointPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", 
+         RowBox[{"-", "1.000000"}], ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", "1.000000", ",", "11.000000"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"7.000000", ",", "1.000000", ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", "7.000000", ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", 
+         RowBox[{"-", "1.000000"}], ",", "11.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", 
+         RowBox[{"-", "1.000000"}], ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", "9.000000", ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", "1.000000", ",", 
+         RowBox[{"-", "11.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", "1.000000", ",", "11.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", "7.000000", ",", "11.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "5.000000"}], ",", "1.000000", ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", "7.000000", ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", 
+         RowBox[{"-", "7.000000"}], ",", 
+         RowBox[{"-", "1.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", 
+         RowBox[{"-", "1.000000"}], ",", "9.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"7.000000", ",", 
+         RowBox[{"-", "1.000000"}], ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", "9.000000", ",", "1.000000"}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", "1.000000", ",", 
+         RowBox[{"-", "9.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"7.000000", ",", "1.000000", ",", "9.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", "7.000000", ",", "9.000000"}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "7.000000"}], ",", "1.000000", ",", "1.000000"}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"7.000000", ",", "7.000000", ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1.000000"}], ",", 
+         RowBox[{"-", "7.000000"}], ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", 
+         RowBox[{"-", "1.000000"}], ",", 
+         RowBox[{"-", "9.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", 
+         RowBox[{"-", "1.000000"}], ",", "9.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", "9.000000", ",", "9.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "5.000000"}], ",", 
+         RowBox[{"-", "1.000000"}], ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", "9.000000", ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", 
+         RowBox[{"-", "9.000000"}], ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", "1.000000", ",", "19.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", "1.000000", ",", 
+         RowBox[{"-", "9.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", "7.000000", ",", 
+         RowBox[{"-", "9.000000"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "5.000000"}], ",", "1.000000", ",", "9.000000"}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", "7.000000", ",", "9.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", 
+         RowBox[{"-", "7.000000"}], ",", "9.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"11.000000", ",", "1.000000", ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "5.000000"}], ",", "7.000000", ",", "1.000000"}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"5.000000", ",", 
+         RowBox[{"-", "7.000000"}], ",", "1.000000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1.000000", ",", "15.000000", ",", "1.000000"}], "}"}]}], 
+      "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", 
+        RowBox[{"PointSize", "\[Rule]", "0.02"}]}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+  "Room", ",", " ", "ImageSources1", ",", "ImageSources2", ",", 
+   "ImageSources3", ",", "SoundSource", ",", 
+   RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.703916151032518*^9, 3.703916151624255*^9}, {
+  3.703916200931271*^9, 3.703916416446306*^9}, {3.7039164466624527`*^9, 
+  3.7039167995734873`*^9}, {3.703916996715939*^9, 3.703917127459804*^9}, {
+  3.7039172146651173`*^9, 3.7039172931354094`*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[0, 0, 1], Opacity[0.1], CuboidBox[{0, 0, 0}, {3, 4, 5}]}, 
+   {RGBColor[0, 0, 1], PointSize[0.02], 
+    Point3DBox[{{1., 1., -1.}, {-1., 1., 1.}, {1., -1., 1.}, {1., 1., 9.}, {
+     5., 1., 1.}, {1., 7., 1.}}]}, 
+   {RGBColor[1, 1, 0], PointSize[0.02], Point3DBox[CompressedData["
+1:eJxTTMoPSmViYGAQAmJmBhj4sB9K2xPgo4tDaTUHCC3igN8cGQc0cVzmovGV
+HND022NXT0geZg7cnTj8A1OHYQ5M/gCaOTj0wdwDt/cAdvNg5uByvwxcHwCq
+bjpb
+     "]]}, 
+   {RGBColor[1, 0, 0], PointSize[0.02], Point3DBox[CompressedData["
+1:eJyFksENgzAUQyO6Akcu7YFjLx2gmYERkDgzIn+kjgAS2BKvfIEUfSXf8bcd
+nuM8TE0ppd/Wo+j7LTf1u9e+7rWr53Pi3V+uceJpiQP+lfFIT4AHOrWXHs+N
+a13iyfR3gXNU6b3zb1/MT74DPEke6nsufcF/9m7ZPes9+nwv+tBe1TnDXwsc
+52ren56jfsTP+bjnfKQffeuswINX+eic/5d9xZmHfrOc38avJq1wLA==
+     "]]}, 
+   {RGBColor[0, 1, 0], PointSize[0.02], Point3DBox[{{1., 1., 1.}}]}},
+  Boxed->False,
+  ImageSize->{888.0937519608649, 680.},
+  ViewPoint->{-1.5875469615111162`, 1.5120631829594189`, 2.5774715470273337`},
+  
+  ViewVertical->{-0.20457043813113784`, -0.4668853018932088, 
+   0.9194704619639047}]], "Output",
+ CellChangeTimes->{
+  3.7039165627913303`*^9, {3.7039166132988453`*^9, 3.703916671956277*^9}, {
+   3.703916706983553*^9, 3.703916800236691*^9}, 3.703917128925597*^9, {
+   3.703917286303097*^9, 3.7039172939720573`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1160, 824},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 9, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 10183, 265, 522, "Input"],
+Cell[10766, 289, 1312, 27, 695, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
