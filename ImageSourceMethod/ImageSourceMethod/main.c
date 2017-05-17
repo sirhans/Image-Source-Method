@@ -115,6 +115,7 @@ void ISMTests2(size_t reflectionMaxOrder){
     float width  = 5.0;
     float absorptionCoefficient = 0.9;
     float speedOfSound = 340.0;
+    float micDistance = 0.3; // this is d_M
     ISMVector3D sourcePosition   = (ISMVector3D){1,1,1};
     ISMVector3D listenerLeftEar  = (ISMVector3D){2,2,2};
     ISMVector3D listenerRightEar = (ISMVector3D){2,2.2,2};
@@ -123,6 +124,7 @@ void ISMTests2(size_t reflectionMaxOrder){
     ISM_simulateRoom(length, height, width,
                      absorptionCoefficient,
                      speedOfSound,
+                     micDistance,
                      reflectionMaxOrder,
                      sourcePosition,
                      listenerLeftEar,

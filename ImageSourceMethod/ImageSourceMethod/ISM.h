@@ -21,6 +21,7 @@ typedef struct ISMImageSource {
 void ISM_simulateRoom(float length, float height, float width,
                       float wallAbsorbtionCoefficient,
                       float speedOfSound,
+                      float micDistance,
                       size_t reflectionMaxOrder,
                       ISMVector3D sourcePosition,
                       ISMVector3D listenerLeftEar,

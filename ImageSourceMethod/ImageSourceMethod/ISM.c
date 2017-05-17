@@ -42,6 +42,7 @@ size_t ISM_totalSourcesForOrder(size_t N){
 void ISM_simulateRoom(float length, float height, float width,
                       float wallAbsorbtionCoefficient,
                       float speedOfSound,
+                      float micDistance,
                       size_t reflectionMaxOrder,
                       ISMVector3D sourcePosition,
                       ISMVector3D listenerLeftEar,
@@ -67,7 +68,7 @@ void ISM_simulateRoom(float length, float height, float width,
     // insert the source as the first image source
     imageSourcesByLevel[0][0] = (ISMImageSource){sourcePosition,true};
     
-    // do the reflections for each order
+    // find the image source locations for each order
     for(size_t order=0; order<reflectionMaxOrder; order++){
         // reflect from the sources at order to the sources at order+1
         ISM_reflectSources(room.walls, 6,
@@ -97,7 +98,7 @@ void ISM_simulateRoom(float length, float height, float width,
             reflectionGains[k] = powf(-wallAbsorbtionCoefficient,(float)i);
             
             // model the 1/d pressure loss
-            reflectionGains[k] /= distances[k];
+            reflectionGains[k] *= micDistance/distances[k];
             
             // copy the position of the sound source to the output list
             imageSources[k] = imageSourcesByLevel[i][j].location;
