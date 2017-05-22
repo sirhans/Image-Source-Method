@@ -100,12 +100,14 @@ void ISMTests2(size_t reflectionMaxOrder){
     
     // allocate memory for the outputs of the simulation
     ISMVector3D* imageSources;
-    float* reflectionTimes;
-    float* reflectionGains;
+    float* reflectionTimesL, *reflectionTimesR;
+    float* reflectionGainsL, *reflectionGainsR;
     size_t* reflectionOrders;
     imageSources = malloc(sizeof(ISMImageSource)*ISM_totalSourcesForOrder(reflectionMaxOrder));
-    reflectionTimes = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
-    reflectionGains = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
+    reflectionTimesL = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
+    reflectionTimesR = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
+    reflectionGainsL = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
+    reflectionGainsR = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
     reflectionOrders = malloc(sizeof(ISMImageSource)*ISM_totalSourcesForOrder(reflectionMaxOrder));
     
     
@@ -130,17 +132,27 @@ void ISMTests2(size_t reflectionMaxOrder){
                      listenerLeftEar,
                      listenerRightEar,
                      imageSources,           // (output) source positions
-                     reflectionTimes,        // (output)
-                     reflectionGains,        // (output)
+                     reflectionTimesL,       // (output)
+                     reflectionTimesR,       // (output)
+                     reflectionGainsL,       // (output)
+                     reflectionGainsR,       // (output)
                      reflectionOrders);      // (output) order of each I.S.
     
-    printf("Reflection Gains {");
+    printf("Reflection Gains L {");
     for(size_t i=0; i<ISM_totalSourcesForOrder(reflectionMaxOrder); i++)
-      printf("%f, ",reflectionGains[i]);
+      printf("%f, ",reflectionGainsL[i]);
     printf("}\n\n");
     
-    printf("Reflection Times {");
+    printf("Reflection Times L {");
     for(size_t i=0; i<ISM_totalSourcesForOrder(reflectionMaxOrder); i++)
-        printf("%f, ",reflectionTimes[i]);
+        printf("%f, ",reflectionTimesL[i]);
     printf("}\n\n");
+    
+    // free memory
+    free(imageSources);
+    free(reflectionTimesL);
+    free(reflectionTimesR);
+    free(reflectionGainsL);
+    free(reflectionGainsR);
+    free(reflectionOrders);
 }

@@ -27,8 +27,10 @@ void ISM_simulateRoom(float length, float height, float width,
                       ISMVector3D listenerLeftEar,
                       ISMVector3D listenerRightEar,
                       ISMVector3D* imageSources,
-                      float* reflectionTimes,
-                      float* reflectionGains,
+                      float* reflectionTimesL,
+                      float* reflectionTimesR,
+                      float* reflectionGainsL,
+                      float* reflectionGainsR,
                       size_t* reflectionOrders);
 
 void ISM_reflectSources(const ISMWall* walls,

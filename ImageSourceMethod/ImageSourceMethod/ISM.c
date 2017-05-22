@@ -14,17 +14,8 @@
 /*
  * find the distance from s to the left or right ear, whichever is shortest
  */
-float ISM_distanceFromL(ISMVector3D listenerLeftEar,
-                        ISMVector3D listenerRightEar,
-                        ISMImageSource s){
-    // find distance to left ear
-    float distanceL = v3_l2Norm(v3_sub(s.location, listenerLeftEar));
-    
-    // find distance to right ear
-    float distanceR = v3_l2Norm(v3_sub(s.location, listenerRightEar));
-    
-    // return the minimum of the two
-    return distanceL < distanceR ? distanceL : distanceR;
+float ISM_distanceFromSource(ISMVector3D L, ISMImageSource S){
+    return v3_l2Norm(v3_sub(S.location, L));
 }
 
 
@@ -48,8 +39,10 @@ void ISM_simulateRoom(float length, float height, float width,
                       ISMVector3D listenerLeftEar,
                       ISMVector3D listenerRightEar,
                       ISMVector3D* imageSources,
-                      float* reflectionTimes,
-                      float* reflectionGains,
+                      float* reflectionTimesL,
+                      float* reflectionTimesR,
+                      float* reflectionGainsL,
+                      float* reflectionGainsR,
                       size_t* reflectionOrders){
     
     // allocate a 2d array for storing all the image sources at each order
@@ -78,7 +71,8 @@ void ISM_simulateRoom(float length, float height, float width,
     
     
     // allocate memory for image source distances
-    float* distances = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
+    float* distancesL = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
+    float* distancesR = malloc(sizeof(float)*ISM_totalSourcesForOrder(reflectionMaxOrder));
     
     
     /*
@@ -88,17 +82,24 @@ void ISM_simulateRoom(float length, float height, float width,
     for(size_t i=0; i<=reflectionMaxOrder; i++){
         for(size_t j=0; j<ISM_numSourcesAtOrder(i); j++){
             // find the distance from listener for each source
-            distances[k] = ISM_distanceFromL(listenerLeftEar,
-                                               listenerRightEar,
+            // left ear
+            distancesL[k] = ISM_distanceFromSource(listenerLeftEar,
                                                imageSourcesByLevel[i][j]);
+            // right ear
+            distancesR[k] = ISM_distanceFromSource(listenerRightEar,
+                                               imageSourcesByLevel[i][j]);
+            
             // convert distance to time
-            reflectionTimes[k] = distances[k]/speedOfSound;
+            reflectionTimesL[k] = distancesL[k]/speedOfSound;
+            reflectionTimesR[k] = distancesR[k]/speedOfSound;
             
             // find the loss due to reflections
-            reflectionGains[k] = powf(-wallAbsorbtionCoefficient,(float)i);
+            reflectionGainsL[k] = powf(-wallAbsorbtionCoefficient,(float)i);
+            reflectionGainsR[k] = powf(-wallAbsorbtionCoefficient,(float)i);
             
             // model the 1/d pressure loss
-            reflectionGains[k] *= micDistance/distances[k];
+            reflectionGainsL[k] *= micDistance/distancesL[k];
+            reflectionGainsR[k] *= micDistance/distancesR[k];
             
             // copy the position of the sound source to the output list
             imageSources[k] = imageSourcesByLevel[i][j].location;
@@ -107,7 +108,8 @@ void ISM_simulateRoom(float length, float height, float width,
         }
     }
     
-    free(distances);
+    free(distancesL);
+    free(distancesR);
 }
 
 
