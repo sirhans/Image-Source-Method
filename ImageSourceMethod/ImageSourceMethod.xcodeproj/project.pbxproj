@@ -12,6 +12,9 @@
 		3AAAF9BD1ECAF91000311CE7 /* ISMWall.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AAAF9BC1ECAF91000311CE7 /* ISMWall.c */; };
 		3AAE63191EC962F500DD84BE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AAE63181EC962F500DD84BE /* main.c */; };
 		3AAE63211EC9633B00DD84BE /* ISM.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AAE631F1EC9633B00DD84BE /* ISM.c */; };
+		3AB12BC21ED29D8200606B11 /* HRTFFilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12BC01ED29D8200606B11 /* HRTFFilter.c */; };
+		3AB12BC61ED2A71F00606B11 /* ERImpulseResponse.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12BC41ED2A71F00606B11 /* ERImpulseResponse.c */; };
+		3AB12BC91ED2E4F400606B11 /* ISMVector2D.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12BC71ED2E4F400606B11 /* ISMVector2D.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +40,12 @@
 		3AAE63201EC9633B00DD84BE /* ISM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ISM.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3AAE63221EC963DB00DD84BE /* ISMVector3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISMVector3D.h; sourceTree = "<group>"; };
 		3AAE63231EC9644D00DD84BE /* ISMWall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ISMWall.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3AB12BC01ED29D8200606B11 /* HRTFFilter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HRTFFilter.c; sourceTree = "<group>"; };
+		3AB12BC11ED29D8200606B11 /* HRTFFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTFFilter.h; sourceTree = "<group>"; };
+		3AB12BC41ED2A71F00606B11 /* ERImpulseResponse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ERImpulseResponse.c; sourceTree = "<group>"; };
+		3AB12BC51ED2A71F00606B11 /* ERImpulseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERImpulseResponse.h; sourceTree = "<group>"; };
+		3AB12BC71ED2E4F400606B11 /* ISMVector2D.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ISMVector2D.c; sourceTree = "<group>"; };
+		3AB12BC81ED2E4F400606B11 /* ISMVector2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMVector2D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +87,12 @@
 				3AAAF9BC1ECAF91000311CE7 /* ISMWall.c */,
 				3A388EDE1ECABE2F00DC910C /* ISMRoom.c */,
 				3A388EDF1ECABE2F00DC910C /* ISMRoom.h */,
+				3AB12BC01ED29D8200606B11 /* HRTFFilter.c */,
+				3AB12BC11ED29D8200606B11 /* HRTFFilter.h */,
+				3AB12BC41ED2A71F00606B11 /* ERImpulseResponse.c */,
+				3AB12BC51ED2A71F00606B11 /* ERImpulseResponse.h */,
+				3AB12BC71ED2E4F400606B11 /* ISMVector2D.c */,
+				3AB12BC81ED2E4F400606B11 /* ISMVector2D.h */,
 			);
 			path = ImageSourceMethod;
 			sourceTree = "<group>";
@@ -139,9 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB12BC91ED2E4F400606B11 /* ISMVector2D.c in Sources */,
 				3AAE63191EC962F500DD84BE /* main.c in Sources */,
 				3AAAF9BB1ECAF86900311CE7 /* ISMVector3D.c in Sources */,
+				3AB12BC61ED2A71F00606B11 /* ERImpulseResponse.c in Sources */,
 				3A388EE01ECABE2F00DC910C /* ISMRoom.c in Sources */,
+				3AB12BC21ED29D8200606B11 /* HRTFFilter.c in Sources */,
 				3AAE63211EC9633B00DD84BE /* ISM.c in Sources */,
 				3AAAF9BD1ECAF91000311CE7 /* ISMWall.c in Sources */,
 			);
