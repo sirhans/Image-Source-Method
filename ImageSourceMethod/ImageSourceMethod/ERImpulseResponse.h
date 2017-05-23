@@ -9,7 +9,7 @@
 #ifndef ERImpulseResponse_h
 #define ERImpulseResponse_h
 
-#define HRTF_IR_LENGTH 32 // length in samples of filter impulse responses
+#define HRTF_IR_LENGTH 64 // length in samples of filter impulse responses
 
 #include <stdio.h>
 
