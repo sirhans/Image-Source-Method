@@ -87,9 +87,9 @@ void ERImpulseResponse(const float* timesL, const float* timesR,
         for(size_t j=0; j<HRTF_IR_LENGTH; j++){
             // copy the L and R filter impulses to the output, scalaing
             // according to the gain coefficient of the output tap
-            leftOut[j+startPositionL] =
+            leftOut[j+startPositionL] +=
                         impulseResponses[angleIdxL][j]*gainsL[i];
-            rightOut[j+startPositionR] =
+            rightOut[j+startPositionR] +=
                         impulseResponses[angleIdxR][j]*gainsR[i];
         }
     }
