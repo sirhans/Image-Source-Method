@@ -237,7 +237,7 @@ void ISMImpulseResponseTest(){
         ISMVector2D leftDirection = flatten2D(earToSourceL);
         ISMVector2D rightDirection = flatten2D(earToSourceR);
         anglesLeft[i]  = v2_angle(faceFront, leftDirection);
-        anglesRight[i] = v2_angle(faceFront, rightDirection);
+        anglesRight[i] = v2_angle(rightDirection, faceFront);
     }
     
     ERImpulseResponse(reflectionTimesL, reflectionTimesR,
